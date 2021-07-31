@@ -9,11 +9,39 @@ echo "<br>";
 $num1 = 100;
 $num2 = 5;
 echo $num1 * $num2;
-?>
 
-<form action="index.php" method="post">
-    First name: <input type="text" name="fname" value="Input value here">
-</form>
+?>
+<br>
+<br>
+<?php
+
+    $marks = [
+        "Ali Nisham" => [
+                            'Chemistry' => 75,
+                            'English' => 80,
+                            'Maths' => 45,
+                        ],
+        "Ahmed" => [
+                            'Chemistry' => 10,
+                            'English' => 20,
+                            'Maths' => 45,
+                        ],
+        "Ibrahim" => [
+                            'Chemistry' => 45,
+                            'English' => 70,
+                            'Maths' => 45,
+                        ],
+
+           ];
+    
+    foreach($marks as $student => $subjects){
+        foreach($subjects as $subject => $marks) {
+            echo "$student scored $marks in $subject";
+            echo "<br>";
+        }
+        
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +52,13 @@ echo $num1 * $num2;
     <title>Document</title>
 </head>
 <body>
-    Welcome <?php echo $_POST["fname"]; ?>
+    <br>
+    <br>
+    <form action="index.php" method="GET">
+        First name: <input type="text" name="fname" value="Input value here">
+    </form>
+
+    Welcome <?php echo $_GET["fname"]; ?>
 
 </body>
 </html>
