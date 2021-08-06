@@ -1,6 +1,11 @@
 <?php
-    include('partials/header.php');
-    include('partials/sidebar.php')
+    include('../partials/header.php');
+    include('../partials/sidebar.php');
+    include('../database.php');
+    
+    $sql = "SELECT * FROM articles";
+    $results = $pdo->query($sql);
+    $rows = $results->fetchAll();
 ?>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -21,7 +26,7 @@
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
-      <h2>Section title</h2>
+      <h2>All Articles</h2>
 
 
       <div class="table-responsive">
@@ -29,23 +34,28 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
+              <th scope="col">Title</th>
+              <th scope="col">Content</th>
+              <th scope="col">Published Date</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
+            <?php foreach($rows as $row): ?>
+              <td><?= $row['id'] ?></td> <!-- <?php echo $row['id'] ?> -->
+              <td><?= $row['title'] ?></td>
+              <td><?= $row['content'] ?></td>
+              <td><?= $row['published_date'] ?></td>
+              <td>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+              </td>
             </tr>
+            <?php endforeach ?>
             </tbody>
         </table>
       </div>
     </main>
 
-    <?php include('partials/footer.php') ?>
+    <?php include('../partials/footer.php') ?>
