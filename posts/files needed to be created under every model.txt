@@ -1,0 +1,10 @@
+
+
+Articles
+    - index.php
+    - create.php
+    - store.php
+    - edit.php
+    - update.php
+    - delete.php
+    - _form.php

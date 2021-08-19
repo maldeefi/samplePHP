@@ -54,11 +54,28 @@ echo $num1 * $num2;
 <body>
     <br>
     <br>
-    <form action="index.php" method="GET">
-        First name: <input type="text" name="fname" value="Input value here">
+    <form action="old.php" method="GET">
+        First name: <input type="text" name="fname" value="First Name">
+        Last Name: <input type="text" name="flastname" value="Last Name">
+        <input type="submit" value="done">
     </form>
+    <?php
 
-    Welcome <?php echo $_GET["fname"]; ?>
+    if (isset($_GET["fname"]) || isset($_GET["flastname"])){
+        $fname = $_GET["fname"];    
+        $flastname = $_GET["flastname"];
+    }
+
+
+
+    if (isset($fname)){
+        echo "Welcome $fname $flastname";
+    } else {
+       echo "";
+    }
+    ?>
+
+
 
 </body>
 </html>
