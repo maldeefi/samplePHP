@@ -1,0 +1,10 @@
+
+
+Articles
+    1 - index.php - list all articles - htmp & php
+    2 - create.php - open form in creation mode - html & php
+    3 - store.php - process the data entered in create.php - php
+    4 - edit.php - Open form in edit mode - html & php
+    5 - update.php - prcoess the edit data from edit.php - php
+    6 - delete.php - process deleting an article - php
+    7 - _form.php
