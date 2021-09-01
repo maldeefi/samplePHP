@@ -8,7 +8,7 @@
 
     <h1 class="h2 mt-3">Add New Articles</h1>
 
-    <form action="<?= $domain ?>/posts/store.php" method="GET">
+    <form action="<?= $domain ?>/posts/store.php" method="POST">
         <?php include('_form.php') ?>
     </form>
 

@@ -19,6 +19,7 @@
     <!-- Bootstrap core CSS -->
 <link href="<?= $domain ?>/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+<script src="https://cdn.tiny.cloud/1/uee06fvd2nt3g00kn65yecijmcvsjadl3piv23b5g6n4vbfw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <!-- Favicons
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -62,5 +63,4 @@
       <a class="nav-link px-3" href="#">Sign out</a>
     </div>
   </div>
-  <script src="https://cdn.tiny.cloud/1/uee06fvd2nt3g00kn65yecijmcvsjadl3piv23b5g6n4vbfw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </header>
